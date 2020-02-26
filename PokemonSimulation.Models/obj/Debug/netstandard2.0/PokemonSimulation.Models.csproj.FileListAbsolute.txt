@@ -1,0 +1,8 @@
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/bin/Debug/netstandard2.0/PokemonSimulation.Models.deps.json
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/bin/Debug/netstandard2.0/PokemonSimulation.Models.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/bin/Debug/netstandard2.0/PokemonSimulation.Models.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/obj/Debug/netstandard2.0/PokemonSimulation.Models.csprojAssemblyReference.cache
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/obj/Debug/netstandard2.0/PokemonSimulation.Models.AssemblyInfoInputs.cache
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/obj/Debug/netstandard2.0/PokemonSimulation.Models.AssemblyInfo.cs
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/obj/Debug/netstandard2.0/PokemonSimulation.Models.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/obj/Debug/netstandard2.0/PokemonSimulation.Models.pdb

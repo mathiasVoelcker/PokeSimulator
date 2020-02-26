@@ -1,0 +1,13 @@
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/PokemonSimulation.Domain.deps.json
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/PokemonSimulation.Domain.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/PokemonSimulation.Domain.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/BaseSecurity.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/PokemonSimulation.Models.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/PokemonSimulation.Models.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/bin/Debug/netstandard2.0/BaseSecurity.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.csprojAssemblyReference.cache
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.AssemblyInfoInputs.cache
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.AssemblyInfo.cs
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.csproj.CopyComplete
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/obj/Debug/netstandard2.0/PokemonSimulation.Domain.pdb
