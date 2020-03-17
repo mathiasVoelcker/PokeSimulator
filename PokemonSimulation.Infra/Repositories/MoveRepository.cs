@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using Dapper;
-using PokemonSimulation.Infra.Database;
 using PokemonSimulation.Infra.Interfaces;
 using PokemonSimulation.Models;
 
@@ -7,7 +7,15 @@ namespace PokemonSimulation.Infra.Repositories
 {
     public class MoveRepository : BaseRepository, IMoveRepository
     {
-        public MoveRepository(DbSession dbSession) : base(dbSession) { }
+        public MoveRepository(IDbSession dbSession) : base(dbSession) { }
+
+        public IEnumerable<Moves> GetAll()
+        {
+            using (var conn = NewConnection)
+            {
+                return conn.GetList<Moves>();
+            }
+        }
 
         public void Create(Moves move)
         {
@@ -16,5 +24,6 @@ namespace PokemonSimulation.Infra.Repositories
                 conn.Insert(move);
             }
         }
+
     }
 }

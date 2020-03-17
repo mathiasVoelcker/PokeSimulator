@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Dapper;
 using PokemonSimulation.Infra.Database;
 using PokemonSimulation.Infra.Interfaces;
@@ -9,7 +10,15 @@ namespace PokemonSimulation.Infra.Repositories
 {
     public class NatureRepository : BaseRepository, INatureRepository
     {
-        public NatureRepository(DbSession dbSession) : base(dbSession) { }
+        public NatureRepository(IDbSession dbSession) : base(dbSession) { }
+
+        public IEnumerable<Natures> GetAll()
+        {
+            using (var conn = NewConnection)
+            {
+                return conn.GetList<Natures>();
+            }
+        }
 
         public void CreateNature(Natures nature)
         {
@@ -18,5 +27,6 @@ namespace PokemonSimulation.Infra.Repositories
                 conn.Insert(nature);
             }
         }
+
     }
 }

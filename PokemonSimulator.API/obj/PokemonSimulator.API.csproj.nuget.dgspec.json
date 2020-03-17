@@ -27,7 +27,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj": {
+                "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -42,6 +46,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[1.60.6, )"
+            },
+            "Extensions.MV": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -92,16 +100,19 @@
           "/Users/mathiasvoelcker/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.1": {
             "projectReferences": {
               "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/BaseSecurity.csproj": {
                 "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/BaseSecurity.csproj"
+              },
+              "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj": {
+                "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj"
               },
               "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj": {
                 "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj"
@@ -116,13 +127,92 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj",
+        "projectName": "PokemonSimulation.Infra",
+        "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj",
+        "packagesPath": "/Users/mathiasvoelcker/.nuget/packages/",
+        "outputPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/mathiasvoelcker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj": {
+                "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Dapper": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[2.0.30, )"
+            },
+            "Dapper.SimpleCRUD": {
+              "target": "Package",
+              "version": "[2.2.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.1.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.0, )"
             }
           },
           "imports": [
@@ -135,6 +225,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
@@ -174,6 +269,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Extensions.MV": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -225,6 +324,9 @@
               "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/PokemonSimulation.Domain.csproj": {
                 "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Domain/PokemonSimulation.Domain.csproj"
               },
+              "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj": {
+                "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/PokemonSimulation.Infra.csproj"
+              },
               "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj": {
                 "projectPath": "/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Models/PokemonSimulation.Models.csproj"
               }
@@ -244,6 +346,10 @@
               "target": "Package",
               "version": "[2.0.30, )"
             },
+            "Extensions.MV": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -252,6 +358,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

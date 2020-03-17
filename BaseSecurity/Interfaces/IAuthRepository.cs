@@ -11,5 +11,7 @@ namespace BaseSecurity.Interfaces
         Task<User> Register(User user);
 
         string CreateToken(User user);
+
+        int GetUserIdFromToken(string token);
     }
 }

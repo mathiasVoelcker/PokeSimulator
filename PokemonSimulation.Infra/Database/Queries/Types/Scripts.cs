@@ -3,8 +3,10 @@ namespace PokemonSimulation.Infra.Database.Queries.Types
     public class Scripts
     {
 
-        public static string GetAllTypeSql = @"SELECT * FROM TYPES";
+        public static readonly string GetAllType = @"SELECT * FROM TYPES";
 
-        public static string CreateTypeSql = @"INSERT INTO TYPES (Name) VALUES (@Name)";
+        public static readonly string GetById = "SELECT * FROM TYPES WHERE ID = @Id";
+
+        public static readonly string CreateType = @"INSERT INTO TYPES (Name) VALUES (@Name)";
     }
 }

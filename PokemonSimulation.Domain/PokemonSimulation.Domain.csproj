@@ -2,11 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PokemonSimulation.Models\PokemonSimulation.Models.csproj" />
+    <ProjectReference Include="..\PokemonSimulation.Infra\PokemonSimulation.Infra.csproj" />
     <ProjectReference Include="..\BaseSecurity\BaseSecurity.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
 </Project>

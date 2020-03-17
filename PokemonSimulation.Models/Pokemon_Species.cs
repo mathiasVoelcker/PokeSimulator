@@ -25,5 +25,9 @@ namespace PokemonSimulation.Models
         public int First_Type_Id { get; set; }
 
         public int? Second_Type_Id { get; set; }
+
+        public Models.Type FirstType { get; set; }
+
+        public Models.Type SecondType { get; set; }
     }
 }

@@ -1,5 +1,4 @@
 using System;
-using BaseSecurity.Db;
 using BaseSecurity.Interfaces;
 using BaseSecurity.Repositories;
 using BaseSecurity.Security;
@@ -15,6 +14,12 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PokemonSimulation.Domain.Applications;
 using PokemonSimulation.Domain.Interfaces;
+using PokemonSimulation.Infra.Interfaces;
+using IDbSession = PokemonSimulation.Infra.Interfaces.IDbSession;
+using DbSessionBaseSecurity = BaseSecurity.Db.DbSession;
+using DbSession = PokemonSimulation.Infra.Database.DbSession;
+using PokemonSimulation.Infra;
+using PokemonSimulation.Infra.Repositories;
 
 namespace PokemonSimulator.API
 {
@@ -24,21 +29,24 @@ namespace PokemonSimulator.API
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "wwwroot";
+            });
+
             var signingConfiguration = new SigningConfiguration();
-            // services.AddSingleton(signingConfiguration);
+            services.AddSingleton(signingConfiguration);
 
             var tokenConfiguration = new TokenConfiguration();
             new ConfigureFromConfigurationOptions<TokenConfiguration>(
                 Configuration.GetSection("TokenConfiguration"))
                     .Configure(tokenConfiguration);
-            // services.AddSingleton(tokenConfiguration);
+            services.AddSingleton(tokenConfiguration);
 
             services.AddAuthentication(authOptions => {
                 authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -62,15 +70,42 @@ namespace PokemonSimulator.API
             });
             
             var connectionString = Configuration.GetConnectionString("MainConnection");
+            var dbSessionBaseSecurity = new DbSessionBaseSecurity(connectionString);
             var dbSession = new DbSession(connectionString);
             services.AddScoped<IDbSession>(sb => dbSession);
-            services.AddScoped<IAuthApplication, AuthApplication>();
-            // services.AddScoped<IDefaultValueApplication, DefaultValueApplication>();
-            services.AddScoped<IAuthRepository>(factory => new AuthRepository(dbSession, signingConfiguration, tokenConfiguration));
-            services.AddScoped<IDefaultValueRepository, DefaultValueRepository>();
+            
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            services.AddCors();
+            #region Repositories
+            services.AddScoped<IAuthRepository>(factory => new AuthRepository(dbSessionBaseSecurity, signingConfiguration, tokenConfiguration));
+            services.AddScoped<ILoggerDomain>(factory => new LoggerDomain(Configuration));
+            
+            services.AddScoped<IPokemonSpeciesRepository, PokemonSpeciesRepository>();
+            services.AddScoped<ITypeRepository, TypeRepository>();
+            services.AddScoped<ITypeAdvantageRepository, TypeAdvantageRepository>();
+            services.AddScoped<INatureRepository, NatureRepository>();
+            services.AddScoped<IMoveRepository, MoveRepository>();
+            services.AddScoped<IPokemonRepository, PokemonRepository>();
+            #endregion
+            
+            #region Applications
+            services.AddScoped<IAuthApplication, AuthApplication>();
+            services.AddScoped<IPokemonSpeciesApplication, PokemonSpeciesApplication>();
+            services.AddScoped<INatureApplication, NatureApplication>();
+            services.AddScoped<IMoveApplication, MoveApplication>();
+            services.AddScoped<IPokemonApplication, PokemonApplication>();
+            #endregion
+
+            services.AddMvc(options => {
+                options.EnableEndpointRouting = false;
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddCors(options =>
+            {
+                options.AddPolicy("local",
+                builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
 
             services.AddSwaggerGen(c =>
             {
@@ -81,20 +116,38 @@ namespace PokemonSimulator.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors("local");
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            
+            app.UseSpaStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "/api/{controller}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "wwwroot/";
+
             });
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.

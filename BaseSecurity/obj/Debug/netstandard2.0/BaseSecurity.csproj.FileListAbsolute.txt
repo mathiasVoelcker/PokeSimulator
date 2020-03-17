@@ -6,3 +6,6 @@
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/obj/Debug/netstandard2.0/BaseSecurity.AssemblyInfo.cs
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/obj/Debug/netstandard2.0/BaseSecurity.dll
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/obj/Debug/netstandard2.0/BaseSecurity.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/bin/Debug/netstandard2.0/PokemonSimulation.Models.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/bin/Debug/netstandard2.0/PokemonSimulation.Models.pdb
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/BaseSecurity/obj/Debug/netstandard2.0/BaseSecurity.csproj.CopyComplete

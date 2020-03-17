@@ -10,8 +10,10 @@
       "BaseSecurity/1.0.0": {
         "dependencies": {
           "Dapper": "1.60.6",
+          "Extensions.MV": "1.1.1",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "NETStandard.Library": "2.0.3",
+          "PokemonSimulation.Models": "1.0.0",
           "System.Data.SqlClient": "4.6.1",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
         },
@@ -29,6 +31,14 @@
           "lib/netstandard2.0/Dapper.dll": {
             "assemblyVersion": "1.60.0.0",
             "fileVersion": "1.60.6.27094"
+          }
+        }
+      },
+      "Extensions.MV/1.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Extensions.MV.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
           }
         }
       },
@@ -787,6 +797,14 @@
             "fileVersion": "4.6.24705.1"
           }
         }
+      },
+      "PokemonSimulation.Models/1.0.0": {
+        "dependencies": {
+          "Extensions.MV": "1.1.1"
+        },
+        "runtime": {
+          "PokemonSimulation.Models.dll": {}
+        }
       }
     }
   },
@@ -802,6 +820,13 @@
       "sha512": "sha512-mmnJNhKMeF2KhvVXDoVQlFxre8aJAo71YBJrKqFlvuqzYC2QiXUq94/GCDBJzU7paq4GqpkV2glw3308TcGibw==",
       "path": "dapper/1.60.6",
       "hashPath": "dapper.1.60.6.nupkg.sha512"
+    },
+    "Extensions.MV/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sdk+JmY8N+1AbgXtTIAwh4irko4aV2TXhikDl1EJpKX/HHK9hmcD2lcPAPd4jUPvHa4GsieTtEcd97Y5yJMk6A==",
+      "path": "extensions.mv/1.1.1",
+      "hashPath": "extensions.mv.1.1.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
@@ -1257,6 +1282,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "PokemonSimulation.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
