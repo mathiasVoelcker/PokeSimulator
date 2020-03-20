@@ -47,10 +47,6 @@
               "target": "Package",
               "version": "[1.60.6, )"
             },
-            "Extensions.MV": {
-              "target": "Package",
-              "version": "[1.1.1, )"
-            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[5.5.0, )"
@@ -128,6 +124,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -193,6 +199,14 @@
             "Dapper.SimpleCRUD": {
               "target": "Package",
               "version": "[2.2.0.1, )"
+            },
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -271,7 +285,7 @@
           "dependencies": {
             "Extensions.MV": {
               "target": "Package",
-              "version": "[1.1.1, )"
+              "version": "[2.0.2, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

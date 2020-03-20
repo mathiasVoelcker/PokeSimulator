@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Caching.Memory;
 using PokemonSimulation.Domain.Interfaces;
+using PokemonSimulation.Infra;
 using PokemonSimulation.Infra.Interfaces;
 using PokemonSimulation.Models;
 using PokemonSimulation.Models.Adapters;
@@ -14,15 +17,19 @@ namespace PokemonSimulation.Domain.Applications
         private readonly IPokemonSpeciesRepository _pokemonSpeciesRepository;
         private readonly IMoveRepository _moveRepository;
         private readonly INatureRepository _natureRepository;
+        private readonly CacheDomain _cacheDomain;
 
         public PokemonApplication(
             IPokemonRepository pokemonRepository,
-            IPokemonSpeciesRepository pokemonSpeciesRepository, IMoveRepository moveRepository, INatureRepository natureRepository)
+            IPokemonSpeciesRepository pokemonSpeciesRepository,
+            IMoveRepository moveRepository,
+            INatureRepository natureRepository, CacheDomain cacheDomain)
         {
             _pokemonRepository = pokemonRepository;
             _pokemonSpeciesRepository = pokemonSpeciesRepository;
             _moveRepository = moveRepository;
             _natureRepository = natureRepository;
+            _cacheDomain = cacheDomain;
         }
 
         public List<PokemonDto> GetAll(int idUser)
@@ -35,6 +42,13 @@ namespace PokemonSimulation.Domain.Applications
                 listPokemonsDto.Add(pokemon.ToDto(isSimple: true));
             }
             return listPokemonsDto;
+        }
+
+        public List<PokemonDto> GetAllInCache()
+        {
+            List<PokemonDto> listPokemonDto;
+            _cacheDomain.Cache.TryGetValue("Pokemons", out listPokemonDto);
+            return listPokemonDto;
         }
 
         public PokemonDto GetById(int id, int idUser)
@@ -67,9 +81,15 @@ namespace PokemonSimulation.Domain.Applications
 
         }
 
-        public bool SaveInCookie(PokemonDto pokemon)
+        public bool SaveInCache(PokemonDto pokemon)
         {
-            throw new System.NotImplementedException();
+            List<PokemonDto> listPokemonDto;
+            _cacheDomain.Cache.TryGetValue("Pokemons", out listPokemonDto);
+            if (listPokemonDto == null)
+                listPokemonDto = new List<PokemonDto>();    
+            listPokemonDto.Add(pokemon);
+            _cacheDomain.Set("Pokemons", new List<PokemonDto> { pokemon });
+            return true;
         }
 
         public bool Update(PokemonDto pokemon, int idUserLogged)

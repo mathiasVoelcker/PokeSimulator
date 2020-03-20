@@ -32,9 +32,9 @@ export class HomeComponent implements OnInit {
     }
 
   ngOnInit() {
-    if (this.isLogged()) {
+    // if (this.isLogged()) {
       this.listPokemons();
-    }
+    // }
   }
 
   get isListPokemonsEmpty(): boolean {

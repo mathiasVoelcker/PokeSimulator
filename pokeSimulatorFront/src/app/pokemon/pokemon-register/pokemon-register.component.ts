@@ -30,6 +30,7 @@ export class PokemonRegisterComponent implements OnInit {
   pokemonForm: FormGroup;
   natures: Nature[];
   moves: Move[];
+  totalEvLeft: number = 510;
 
   constructor(
     private route: ActivatedRoute,
@@ -170,6 +171,7 @@ export class PokemonRegisterComponent implements OnInit {
     this.pokemonForm.get('evSpAttack').value +
     this.pokemonForm.get('evSpDefense').value +
     this.pokemonForm.get('evSpeed').value;
+    this.totalEvLeft = 510 - ev_total;
     return ev_total <= 510;
   }
 
@@ -218,12 +220,12 @@ export class PokemonRegisterComponent implements OnInit {
 
   setNature(natureId: Nature) {
     this.pokemonForm.get('nature').setValue(natureId);
+    this.refreshStats();
   }
 
   private calculateNature(stat: Stat): number {
-    const natureSelected = this.natures
-      ? this.natures.find(n => n.id == this.pokemonForm.get('nature').value)
-      : null;
+    debugger;
+    const natureSelected = this.pokemonForm.get('nature').value
     if (!natureSelected) {
       return 1;
     }

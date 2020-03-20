@@ -583,7 +583,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    function HomeComponent_div_0_div_1_Template(rf, ctx) {
+    function HomeComponent_div_0_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
@@ -605,9 +605,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function HomeComponent_div_0_div_2_ng_container_25_Template(rf, ctx) {
+    function HomeComponent_div_1_ng_container_25_td_22_Template(rf, ctx) {
       if (rf & 1) {
-        var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_1_ng_container_25_td_22_Template_a_click_1_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
+
+          var pokemon_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+
+          var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r6.editPokemon(pokemon_r3.id);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function HomeComponent_div_1_ng_container_25_td_23_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_1_ng_container_25_td_23_Template_a_click_1_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
+
+          var pokemon_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+
+          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r9.deletePokemon(pokemon_r3.id);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function HomeComponent_div_1_ng_container_25_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
@@ -667,14 +719,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 7);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_0_div_2_ng_container_25_Template_a_click_20_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_1_ng_container_25_Template_a_click_20_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r13);
 
-          var pokemon_r5 = ctx.$implicit;
+          var pokemon_r3 = ctx.$implicit;
 
-          var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+          var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r6.simulateBattle(pokemon_r5.id);
+          return ctx_r12.simulateBattle(pokemon_r3.id);
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "span", 8);
@@ -683,45 +735,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, HomeComponent_div_1_ng_container_25_td_22_Template, 3, 0, "td", 0);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 9);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_0_div_2_ng_container_25_Template_a_click_23_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
-
-          var pokemon_r5 = ctx.$implicit;
-
-          var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
-
-          return ctx_r8.editPokemon(pokemon_r5.id);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "span", 10);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "td");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 11);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_div_0_div_2_ng_container_25_Template_a_click_26_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
-
-          var pokemon_r5 = ctx.$implicit;
-
-          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
-
-          return ctx_r9.deletePokemon(pokemon_r5.id);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "span", 12);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, HomeComponent_div_1_ng_container_25_td_23_Template, 3, 0, "td", 0);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -729,73 +745,81 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var pokemon_r5 = ctx.$implicit;
+        var pokemon_r3 = ctx.$implicit;
 
-        var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+        var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r4.getImgUrl(pokemon_r5.pokemonSpecies), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r2.getImgUrl(pokemon_r3.pokemonSpecies), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", pokemon_r5.pokemonSpecies.name.toUpperCase(), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", pokemon_r3.pokemonSpecies.name.toUpperCase(), " ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.level);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.level);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.attack);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.attack);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.defense);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.defense);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.spAttack);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.spAttack);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.spDefense);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.spDefense);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.speed);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.speed);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r2.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r5.hp);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pokemon_r3.hp);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r2.isLogged());
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r2.isLogged());
       }
     }
 
-    function HomeComponent_div_0_div_2_Template(rf, ctx) {
+    function HomeComponent_div_1_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
@@ -871,7 +895,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "tbody");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, HomeComponent_div_0_div_2_ng_container_25_Template, 28, 21, "ng-container", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, HomeComponent_div_1_ng_container_25_Template, 24, 23, "ng-container", 4);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -881,99 +905,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+        var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.getCSSClass());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r1.getCSSClass());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r3.pokemons);
-      }
-    }
-
-    function HomeComponent_div_0_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_div_0_div_1_Template, 6, 0, "div", 0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, HomeComponent_div_0_div_2_Template, 26, 13, "div", 0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.isListPokemonsEmpty);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r0.isListPokemonsEmpty);
-      }
-    }
-
-    function HomeComponent_div_1_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "You are not logged in. Click ");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 13);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "here to ");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "b");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "log in");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " and list your Pokemons or ");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 14);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "here to ");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "b");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "sign up");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.pokemons);
       }
     }
 
@@ -999,9 +959,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(HomeComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          if (this.isLogged()) {
-            this.listPokemons();
-          }
+          // if (this.isLogged()) {
+          this.listPokemons(); // }
         }
       }, {
         key: "testMethod",
@@ -1076,20 +1035,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-home"]],
       decls: 2,
       vars: 2,
-      consts: [[4, "ngIf"], ["href", "/search"], [1, "table", "table-striped"], ["colspan", "3"], [4, "ngFor", "ngForOf"], [1, "u-align-v-center"], [1, "pokemon-img-small", 3, "src"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Simulate Battle!", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-flash"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Edit Pokemon", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-pencil"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Delete Pokemon", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-trash"], ["href", "/login"], ["href", "/sign_up"]],
+      consts: [[4, "ngIf"], ["href", "/search"], [1, "table", "table-striped"], ["colspan", "3"], [4, "ngFor", "ngForOf"], [1, "u-align-v-center"], [1, "pokemon-img-small", 3, "src"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Simulate Battle!", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-flash"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Edit Pokemon", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-pencil"], ["data-toggle", "tooltip", "data-placement", "top", "title", "Delete Pokemon", 1, "table-button", 3, "click"], ["aria-hidden", "true", 1, "glyphicon", "glyphicon-trash"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, HomeComponent_div_0_Template, 3, 2, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, HomeComponent_div_0_Template, 6, 0, "div", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 12, 0, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 26, 13, "div", 0);
         }
 
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLogged());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isListPokemonsEmpty);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.isLogged());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.isListPokemonsEmpty);
         }
       },
       directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
@@ -1239,13 +1198,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r42 = ctx.$implicit;
+        var item_r46 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r46);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r46);
       }
     }
 
@@ -1332,11 +1291,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          var _r40 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+          var _r44 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r44);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -1587,13 +1546,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r39 = ctx.$implicit;
+        var item_r43 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r39);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r43);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r39);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r43);
       }
     }
 
@@ -1611,6 +1570,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(NatureDropdownComponent, [{
         key: "setItem",
         value: function setItem(text) {
+          debugger;
+
           if (!!text) {
             this.selected.emit(this.natures.find(function (x) {
               return x.name.toUpperCase().includes(text.toUpperCase());
@@ -1672,11 +1633,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          var _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+          var _r41 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r37);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r41);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -1998,13 +1959,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", ctx_r16.pokemon_species.secondType.name, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", ctx_r20.pokemon_species.secondType.name, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 4, ctx_r16.pokemon_species.secondType.name), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 4, ctx_r20.pokemon_species.secondType.name), " ");
       }
     }
 
@@ -2018,7 +1979,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function PokemonRegisterComponent_p_135_Template(rf, ctx) {
+    function PokemonRegisterComponent_p_137_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 42);
 
@@ -2028,7 +1989,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function PokemonRegisterComponent_p_136_Template(rf, ctx) {
+    function PokemonRegisterComponent_p_138_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 42);
 
@@ -2054,6 +2015,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.toastr = toastr;
         this.authService = authService;
         this.pokemon = new _entities_pokemon__WEBPACK_IMPORTED_MODULE_3__["Pokemon"]();
+        this.totalEvLeft = 510;
         this.route.params.subscribe(function (params) {
           _this7.speciesIdParam = params.species_id;
           _this7.pokemonIdParam = params.pokemon_id;
@@ -2181,6 +2143,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "validateEVsTotal",
         value: function validateEVsTotal() {
           var ev_total = this.pokemonForm.get('evHp').value + this.pokemonForm.get('evAttack').value + this.pokemonForm.get('evDefense').value + this.pokemonForm.get('evSpAttack').value + this.pokemonForm.get('evSpDefense').value + this.pokemonForm.get('evSpeed').value;
+          this.totalEvLeft = 510 - ev_total;
           return ev_total <= 510;
         }
       }, {
@@ -2235,15 +2198,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "setNature",
         value: function setNature(natureId) {
           this.pokemonForm.get('nature').setValue(natureId);
+          this.refreshStats();
         }
       }, {
         key: "calculateNature",
         value: function calculateNature(stat) {
-          var _this10 = this;
-
-          var natureSelected = this.natures ? this.natures.find(function (n) {
-            return n.id == _this10.pokemonForm.get('nature').value;
-          }) : null;
+          debugger;
+          var natureSelected = this.pokemonForm.get('nature').value;
 
           if (!natureSelected) {
             return 1;
@@ -2259,16 +2220,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return 1;
         }
-      }, {
-        key: "selectedNature",
-        get: function get() {
-          var _this11 = this;
-
-          if (!this.natures) return null;
-          return this.natures.find(function (x) {
-            return x.id == _this11.pokemonForm.get('nature').value;
-          });
-        }
       }]);
 
       return PokemonRegisterComponent;
@@ -2281,8 +2232,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     PokemonRegisterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: PokemonRegisterComponent,
       selectors: [["app-pokemon-register"]],
-      decls: 153,
-      vars: 44,
+      decls: 155,
+      vars: 45,
       consts: [[3, "formGroup", "ngSubmit"], [1, "row"], [1, "col-md-12"], [1, "panel", "panel-primary"], [1, "panel-heading"], [1, "title", "title-casual"], [1, "panel-body"], [1, "col-md-4", "col-sm-4"], [1, "image-div", "image-div-big"], [1, "pokemon-img-large", 3, "src"], [3, "class", 4, "ngIf"], [1, "col-md-4", "col-sm-4", "left-div"], [1, "field"], [1, "required-field"], ["formControlName", "level", "type", "number", 1, "form-control"], [1, "field", "u-margin-top-medium"], [3, "natures", "selectedItem", "placeholder", "selected"], [1, "col-md-4"], ["id", "pokemonHp"], ["id", "pokemonAttack"], ["id", "pokemonDefense"], ["id", "pokemonSpAttack"], ["id", "pokemonSpDefense"], ["id", "pokemonSpeed"], [1, "col-md-6"], ["formControlName", "ivAttack", "type", "number", 1, "form-control"], ["formControlName", "ivDefense", "type", "number", 1, "form-control"], ["formControlName", "ivSpAttack", "type", "number", 1, "form-control"], ["formControlName", "ivSpDefense", "type", "number", 1, "form-control"], ["formControlName", "ivSpeed", "type", "number", 1, "form-control"], ["formControlName", "ivHp", "type", "number", 1, "form-control"], ["class", "error-message", 4, "ngIf"], ["formControlName", "evAttack", "type", "number", 1, "form-control"], ["formControlName", "evDefense", "type", "number", 1, "form-control"], ["formControlName", "evSpAttack", "type", "number", 1, "form-control"], ["formControlName", "evSpDefense", "type", "number", 1, "form-control"], ["formControlName", "evSpeed", "type", "number", 1, "form-control"], ["formControlName", "evHp", "type", "number", 1, "form-control"], [1, "col-md-3"], [3, "moves", "selectedItem", "placeholder", "selected"], [1, "actions", "right-div"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], [1, "error-message"]],
       template: function PokemonRegisterComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -2710,23 +2661,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](135, PokemonRegisterComponent_p_135_Template, 2, 0, "p", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](136, PokemonRegisterComponent_p_136_Template, 2, 0, "p", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](136);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](137, PokemonRegisterComponent_p_137_Template, 2, 0, "p", 31);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](138, PokemonRegisterComponent_p_138_Template, 2, 0, "p", 31);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](137, "div", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](138, "div", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "div", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](141, "div", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "app-move-dropdown", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](142, "app-move-dropdown", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_140_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_142_listener($event) {
             return ctx.setMove1($event);
           });
 
@@ -2736,13 +2693,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](141, "div", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](143, "div", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](142, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "div", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](143, "app-move-dropdown", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](145, "app-move-dropdown", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_143_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_145_listener($event) {
             return ctx.setMove2($event);
           });
 
@@ -2752,13 +2709,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "div", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](146, "div", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](145, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](147, "div", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](146, "app-move-dropdown", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "app-move-dropdown", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_146_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_148_listener($event) {
             return ctx.setMove3($event);
           });
 
@@ -2768,13 +2725,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](147, "div", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "div", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "div", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "app-move-dropdown", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](151, "app-move-dropdown", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_149_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selected", function PokemonRegisterComponent_Template_app_move_dropdown_selected_151_listener($event) {
             return ctx.setMove4($event);
           });
 
@@ -2786,11 +2743,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "div", 40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "div", 40);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](151, "button", 41);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](153, "button", 41);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](152, "Create Pokemon");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](154, "Create Pokemon");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2812,7 +2769,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("#", ctx.pokemon_species.id, " ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 40, ctx.pokemon_species.name), "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("#", ctx.pokemon_species.id, " ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 41, ctx.pokemon_species.name), "");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
@@ -2824,7 +2781,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](16, 42, ctx.pokemon_species.firstType.name), " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](16, 43, ctx.pokemon_species.firstType.name), " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -2886,7 +2843,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.validateIVs());
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](32);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("EV points left: ", ctx.totalEvLeft, "");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.validateEVs());
 
@@ -3019,15 +2980,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var pokemon_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+        var pokemon_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", pokemon_r13.secondType.name, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", pokemon_r17.secondType.name, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](3, 4, pokemon_r13.secondType.name), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](3, 4, pokemon_r17.secondType.name), " ");
       }
     }
 
@@ -3101,37 +3062,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var pokemon_r13 = ctx.$implicit;
+        var pokemon_r17 = ctx.$implicit;
 
-        var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+        var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "pokemon/", pokemon_r13.id, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "pokemon/", pokemon_r17.id, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 9, pokemon_r13.name));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 9, pokemon_r17.name));
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r12.getImgUrl(pokemon_r13), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r16.getImgUrl(pokemon_r17), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", pokemon_r13.firstType.name, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("type type-", pokemon_r17.firstType.name, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 11, pokemon_r13.firstType.name), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 11, pokemon_r17.firstType.name), " ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", pokemon_r13.secondType);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", pokemon_r17.secondType);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Base stats: ", ctx_r12.getBaseStatTotal(pokemon_r13), "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Base stats: ", ctx_r16.getBaseStatTotal(pokemon_r17), "");
       }
     }
 
@@ -3149,11 +3110,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r11.pokemonSpecies);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r15.pokemonSpecies);
       }
     }
 
@@ -3173,11 +3134,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PokemonSearchComponent, [{
         key: "searchPokemons",
         value: function searchPokemons() {
-          var _this12 = this;
+          var _this10 = this;
 
           this.pokemonSpeciesServie.listPokemonSpecies(this.pokemonSearchForm.get('name').value).subscribe(function (resp) {
             debugger;
-            _this12.pokemonSpecies = resp;
+            _this10.pokemonSpecies = resp;
           });
         }
       }, {
@@ -3316,13 +3277,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(PokemonSpeciesService, _shared_services_main3);
 
       function PokemonSpeciesService(http) {
-        var _this13;
+        var _this11;
 
         _classCallCheck(this, PokemonSpeciesService);
 
-        _this13 = _possibleConstructorReturn(this, _getPrototypeOf(PokemonSpeciesService).call(this, 'pokemonSpecies/'));
-        _this13.http = http;
-        return _this13;
+        _this11 = _possibleConstructorReturn(this, _getPrototypeOf(PokemonSpeciesService).call(this, 'pokemonSpecies/'));
+        _this11.http = http;
+        return _this11;
       }
 
       _createClass(PokemonSpeciesService, [{
@@ -3413,13 +3374,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(PokemonService, _shared_services_main4);
 
       function PokemonService(http) {
-        var _this14;
+        var _this12;
 
         _classCallCheck(this, PokemonService);
 
-        _this14 = _possibleConstructorReturn(this, _getPrototypeOf(PokemonService).call(this, 'pokemons/'));
-        _this14.http = http;
-        return _this14;
+        _this12 = _possibleConstructorReturn(this, _getPrototypeOf(PokemonService).call(this, 'pokemons/'));
+        _this12.http = http;
+        return _this12;
       }
 
       _createClass(PokemonService, [{
@@ -3452,8 +3413,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "deletePokemon",
-        value: function deletePokemon(pokemon_id) {
-          return this.http.delete("".concat(this.url, "delete/").concat(pokemon_id), {
+        value: function deletePokemon(id) {
+          return this.http.delete("".concat(this.url, "delete/").concat(id), {
             headers: this.headers
           });
         }
@@ -3622,13 +3583,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r36 = ctx.$implicit;
+        var item_r40 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", item_r40);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r40);
       }
     }
 
@@ -3636,7 +3597,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function AdvancedDropdownComponent() {
-        var _this15 = this;
+        var _this13 = this;
 
         _classCallCheck(this, AdvancedDropdownComponent);
 
@@ -3644,7 +3605,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.selected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.checkbox = false;
         this.list.valueChanges.subscribe(function (text) {
-          _this15.setItem(text);
+          _this13.setItem(text);
         });
       }
 
@@ -3718,11 +3679,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          var _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+          var _r38 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.inputLabel)("placeholder", ctx.placeholder)("formControl", ctx.list)("matAutocomplete", _r38);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -3840,17 +3801,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r26 = ctx.$implicit;
+        var item_r30 = ctx.$implicit;
 
-        var ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", item_r26.id);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", item_r30.id);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("selected", item_r26.id == ctx_r25.selectedItem);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("selected", item_r30.id == ctx_r29.selectedItem);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r26.name, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", item_r30.name, " ");
       }
     }
 
@@ -4022,18 +3983,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function HeaderComponent_li_25_Template(rf, ctx) {
       if (rf & 1) {
-        var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 15);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HeaderComponent_li_25_Template_a_click_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r28);
 
-          var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r23.logout();
+          return ctx_r27.logout();
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Log out");
@@ -4461,13 +4422,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AuthService, _main_service__WEBPAC);
 
       function AuthService(http) {
-        var _this16;
+        var _this14;
 
         _classCallCheck(this, AuthService);
 
-        _this16 = _possibleConstructorReturn(this, _getPrototypeOf(AuthService).call(this, 'Auth/'));
-        _this16.http = http;
-        return _this16;
+        _this14 = _possibleConstructorReturn(this, _getPrototypeOf(AuthService).call(this, 'Auth/'));
+        _this14.http = http;
+        return _this14;
       }
 
       _createClass(AuthService, [{
@@ -4668,18 +4629,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function SimulationCardComponent_div_12_div_17_Template(rf, ctx) {
       if (rf & 1) {
-        var _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-basic-dropdown", 6);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("itemSelected", function SimulationCardComponent_div_12_div_17_Template_app_basic_dropdown_itemSelected_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r37);
 
-          var ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r32.setMove($event);
+          return ctx_r36.setMove($event);
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -4700,15 +4661,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+        var ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("items", ctx_r30.movesDropdown)("itemTitle", ctx_r30.moveDROPDOWN_TITLE);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("items", ctx_r34.movesDropdown)("itemTitle", ctx_r34.moveDROPDOWN_TITLE);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r30.validateMove());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r34.validateMove());
       }
     }
 
@@ -4770,43 +4731,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r29.getImgUrl(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r33.getImgUrl(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r29.simulationPokemon.pokemon.pokemonSpecies.name.toUpperCase());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r33.simulationPokemon.pokemon.pokemonSpecies.name.toUpperCase());
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("HP: ", ctx_r29.simulationPokemon.pokemon.hp, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("HP: ", ctx_r33.simulationPokemon.pokemon.hp, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Attack: ", ctx_r29.simulationPokemon.pokemon.attack, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Attack: ", ctx_r33.simulationPokemon.pokemon.attack, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Defense: ", ctx_r29.simulationPokemon.pokemon.defense, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Defense: ", ctx_r33.simulationPokemon.pokemon.defense, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Special Attack: ", ctx_r29.simulationPokemon.pokemon.spAttack, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Special Attack: ", ctx_r33.simulationPokemon.pokemon.spAttack, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Special Defense: ", ctx_r29.simulationPokemon.pokemon.spDefense, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Special Defense: ", ctx_r33.simulationPokemon.pokemon.spDefense, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Speed: ", ctx_r29.simulationPokemon.pokemon.speed, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Speed: ", ctx_r33.simulationPokemon.pokemon.speed, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r29.isAttacking);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r33.isAttacking);
       }
     }
 
@@ -4835,62 +4796,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "listPokemons",
         value: function listPokemons() {
-          var _this17 = this;
+          var _this15 = this;
 
           this.pokemonService.listPokemons().subscribe(function (resp) {
-            _this17.pokemons = resp;
+            _this15.pokemons = resp;
             resp.forEach(function (pokemon) {
               var pokemonName = "".concat(pokemon.pokemonSpecies.name.toUpperCase(), " - level ").concat(pokemon.level);
 
-              _this17.pokemonsDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](pokemon.id, pokemonName));
+              _this15.pokemonsDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](pokemon.id, pokemonName));
             });
 
-            if (!!_this17.selectedPokemon) {
-              _this17.setPokemon(_this17.selectedPokemon.toString());
+            if (!!_this15.selectedPokemon) {
+              _this15.setPokemon(_this15.selectedPokemon.toString());
             }
           });
         }
       }, {
         key: "setPokemon",
         value: function setPokemon(id) {
-          var _this18 = this;
+          var _this16 = this;
 
           this.pokemonService.getPokemon(id).subscribe(function (resp) {
-            _this18.simulationPokemon = new _simulation_pokemon__WEBPACK_IMPORTED_MODULE_2__["SimulationPokemon"](resp);
+            _this16.simulationPokemon = new _simulation_pokemon__WEBPACK_IMPORTED_MODULE_2__["SimulationPokemon"](resp);
 
-            if (_this18.isAttacking) {
-              _this18.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
+            if (_this16.isAttacking) {
+              _this16.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
 
-              _this18.movesDropdown = [];
+              _this16.movesDropdown = [];
 
               if (!!resp.move1) {
                 var move1_text = "".concat(resp.move1.name, " - Power: ").concat(resp.move1.basePower, " - ").concat(resp.move1.category);
 
-                _this18.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](1, move1_text));
+                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](1, move1_text));
               }
 
               if (!!resp.move2) {
                 var move2_text = "".concat(resp.move2.name, " - Power: ").concat(resp.move2.basePower, " - ").concat(resp.move2.category);
 
-                _this18.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](2, move2_text));
+                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](2, move2_text));
               }
 
               if (!!resp.move3) {
                 var move3_text = "".concat(resp.move3.name, " - Power: ").concat(resp.move3.basePower, " - ").concat(resp.move3.category);
 
-                _this18.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](3, move3_text));
+                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](3, move3_text));
               }
 
               if (!!resp.move4) {
                 var move4_text = "".concat(resp.move4.name, " - Power: ").concat(resp.move4.basePower, " - ").concat(resp.move4.category);
 
-                _this18.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](4, move4_text));
+                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](4, move4_text));
               }
             } else {
-              _this18.simulationForm.get('defending_pokemon_id').setValue(resp.id);
+              _this16.simulationForm.get('defending_pokemon_id').setValue(resp.id);
             }
 
-            _this18.changed.emit(_this18.simulationPokemon);
+            _this16.changed.emit(_this16.simulationPokemon);
           });
         }
       }, {
@@ -5170,20 +5131,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SimulationService, _shared_services_main5);
 
       function SimulationService(http) {
-        var _this19;
+        var _this17;
 
         _classCallCheck(this, SimulationService);
 
-        _this19 = _possibleConstructorReturn(this, _getPrototypeOf(SimulationService).call(this, 'simulation'));
-        _this19.http = http;
-        return _this19;
+        _this17 = _possibleConstructorReturn(this, _getPrototypeOf(SimulationService).call(this, 'simulation'));
+        _this17.http = http;
+        return _this17;
       }
 
       _createClass(SimulationService, [{
         key: "getDamage",
         value: function getDamage(simulationDto) {
-          var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]().set('attacking_pokemon_id', simulationDto.attacking_pokemon_id.toString()).set('defending_pokemon_id', simulationDto.defending_pokemon_id.toString()).set('moveid', simulationDto.moveid.toString()).set('modifier', simulationDto.modifier.toString());
-          return this.http.get(this.url, {
+          var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]().set('attackingPokemonId', simulationDto.attacking_pokemon_id.toString()).set('defendingPokemonId', simulationDto.defending_pokemon_id.toString()).set('moveId', simulationDto.moveid.toString()).set('modifier', simulationDto.modifier.toString());
+          return this.http.get("".concat(this.url, "/getDamage"), {
             params: params
           });
         }
@@ -5319,15 +5280,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r20.battleResultsTitle);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r24.battleResultsTitle);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r20.battleResults);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r24.battleResults);
       }
     }
 
@@ -5335,7 +5296,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function SimulationComponent(simulationService, route, toastr, authService, fb) {
-        var _this20 = this;
+        var _this18 = this;
 
         _classCallCheck(this, SimulationComponent);
 
@@ -5346,7 +5307,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.ATTACKING_POKEMON = "Attacking Pokemon";
         this.DEFENDING_POKEMON = "Defending Pokemon";
         this.route.params.subscribe(function (params) {
-          _this20.paramId = params.id;
+          _this18.paramId = params.id;
         });
         this.simulationForm = fb.group({
           attacking_pokemon_id: [null, _node_modules_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
@@ -5358,12 +5319,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(SimulationComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {
-          if (!this.isLogged()) {
-            this.toastr.warning('You have to log in to simulate a battle', 'Warning', {
-              disableTimeOut: true
-            });
-          }
+        value: function ngOnInit() {// if (!this.isLogged()) {
+          //   this.toastr.warning(
+          //     'You have to log in to simulate a battle',
+          //     'Warning',
+          //     { disableTimeOut : true}
+          //   );
+          // }
         }
       }, {
         key: "isLogged",
@@ -5383,17 +5345,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "simulateBattle",
         value: function simulateBattle() {
-          var _this21 = this;
+          var _this19 = this;
 
+          debugger;
           var simulationDto = this.simulationForm.getRawValue();
           this.simulationService.getDamage(simulationDto).subscribe(function (resp) {
             var damage = resp;
-            var attacker_name = _this21.attackingPokemon.pokemon.pokemonSpecies.name;
-            var defender_name = _this21.defendingPokemon.pokemon.pokemonSpecies.name;
-            var movename = _this21.attackingPokemon.move.name;
-            var defenderHp = _this21.defendingPokemon.pokemon.hp;
-            _this21.battleResultsTitle = "Pokemon ".concat(attacker_name.toUpperCase(), " attacked ").concat(defender_name.toUpperCase(), " with ").concat(movename, ".");
-            _this21.battleResults = "".concat(movename, " took ").concat(damage, " of damage.\n\n      ").concat(defender_name.toUpperCase(), " HP dropped from ").concat(defenderHp, " to ").concat(defenderHp - damage, ".\n ").concat((damage / defenderHp * 100).toFixed(0), "% of its total HP");
+            var attacker_name = _this19.attackingPokemon.pokemon.pokemonSpecies.name;
+            var defender_name = _this19.defendingPokemon.pokemon.pokemonSpecies.name;
+            var movename = _this19.attackingPokemon.move.name;
+            var defenderHp = _this19.defendingPokemon.pokemon.hp;
+            _this19.battleResultsTitle = "Pokemon ".concat(attacker_name.toUpperCase(), " attacked ").concat(defender_name.toUpperCase(), " with ").concat(movename, ".");
+            _this19.battleResults = "".concat(movename, " took ").concat(damage, " of damage.\n\n      ").concat(defender_name.toUpperCase(), " HP dropped from ").concat(defenderHp, " to ").concat(defenderHp - damage, ".\n ").concat((damage / defenderHp * 100).toFixed(0), "% of its total HP");
           });
         }
       }, {
@@ -5638,15 +5601,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login() {
-          var _this22 = this;
+          var _this20 = this;
 
           var user = new _entities_user__WEBPACK_IMPORTED_MODULE_2__["User"](this.loginForm.get('username').value, this.loginForm.get('password').value);
           this.authService.login(user).subscribe(function (res) {
-            _this22.authService.setToken(res.accessToken);
+            _this20.authService.setToken(res.accessToken);
 
-            _this22.router.navigateByUrl('/');
+            _this20.router.navigateByUrl('/');
           }, function (err) {
-            _this22.toastr.error(err.error.message);
+            _this20.toastr.error(err.error.message);
           });
         }
       }]);
@@ -5864,24 +5827,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SignUpComponent, [{
         key: "signUp",
         value: function signUp() {
-          var _this23 = this;
+          var _this21 = this;
 
           var user = new _entities_user__WEBPACK_IMPORTED_MODULE_2__["User"](this.signUpForm.get('username').value, this.signUpForm.get('password').value);
           this.authService.signUp(user).subscribe(function (response) {
-            _this23.login(user);
+            _this21.login(user);
           }, function (error) {
-            _this23.toastr.error(error.error.message);
+            _this21.toastr.error(error.error.message);
           });
         }
       }, {
         key: "login",
         value: function login(user) {
-          var _this24 = this;
+          var _this22 = this;
 
           this.authService.login(user).subscribe(function (res) {
-            _this24.authService.setToken(res.jwt);
+            _this22.authService.setToken(res.jwt);
 
-            _this24.router.navigateByUrl('/');
+            _this22.router.navigateByUrl('/');
           });
         }
       }, {

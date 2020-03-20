@@ -133,6 +133,7 @@
                 <input formControlName="evHp" class="form-control" type="number">
               </div>
             </div>
+            <p>EV points left: {{totalEvLeft}}</p>
             <p class="error-message" *ngIf="!validateEVs()">All EV must be informed and lower than 252</p>
             <p class="error-message" *ngIf="!validateEVsTotal()">The some of all EV must be lower than 510</p>
           </div>

@@ -7,11 +7,13 @@ namespace PokemonSimulation.Domain.Interfaces
     {
         List<PokemonDto> GetAll(int idUser);
 
+        List<PokemonDto> GetAllInCache();
+
         PokemonDto GetById(int id, int idUser);
 
         bool Save(PokemonDto pokemon);
 
-        bool SaveInCookie(PokemonDto pokemon);
+        bool SaveInCache(PokemonDto pokemon);
 
         bool Update(PokemonDto pokemon, int idUserLogged);
         

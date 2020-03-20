@@ -55,3 +55,5 @@
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/bin/Debug/netcoreapp3.1/Extensions.MV.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/mathiasvoelcker/Desktop/Developer/C#/PokemonCalculator/PokemonSimulator/PokemonSimulation.Infra/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll

@@ -11,6 +11,6 @@ namespace PokemonSimulation.Infra.Interfaces
 
         void Update(Pokemons pokemon);
 
-        void Delete(Pokemons pokemon);  
+        void Delete(Pokemons pokemon);
     }
 }

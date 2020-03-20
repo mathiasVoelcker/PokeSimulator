@@ -26,6 +26,7 @@ namespace PokemonSimulator.API.Controllers
         {
             return ExecFunc(() => {
                 string token = Request.Headers["Authorization"];
+                if (token == null) return _pokemonApplication.GetAllInCache();
                 var idUser =  _authRepository.GetUserIdFromToken(token);
                 return _pokemonApplication.GetAll(idUser);
             });
@@ -47,7 +48,7 @@ namespace PokemonSimulator.API.Controllers
         {
             return ExecFunc(() => {
                 string token = Request.Headers["Authorization"];
-                if (token == null) return _pokemonApplication.SaveInCookie(pokemon);
+                if (token == null) return _pokemonApplication.SaveInCache(pokemon);
                 pokemon.User = new User() { Id = _authRepository.GetUserIdFromToken(token) };
                 return _pokemonApplication.Save(pokemon);
             });

@@ -15,11 +15,11 @@ export class SimulationService extends MainService {
 
   getDamage(simulationDto: SimulationDto): Observable<number> {
     const params = new HttpParams()
-      .set('attacking_pokemon_id', simulationDto.attacking_pokemon_id.toString())
-      .set('defending_pokemon_id', simulationDto.defending_pokemon_id.toString())
-      .set('moveid', simulationDto.moveid.toString())
+      .set('attackingPokemonId', simulationDto.attacking_pokemon_id.toString())
+      .set('defendingPokemonId', simulationDto.defending_pokemon_id.toString())
+      .set('moveId', simulationDto.moveid.toString())
       .set('modifier', simulationDto.modifier.toString());
-    return this.http.get<number>(this.url, { params });
+    return this.http.get<number>(`${this.url}/getDamage`, { params });
   }
 
 }

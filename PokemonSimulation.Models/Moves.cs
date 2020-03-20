@@ -8,7 +8,7 @@ namespace PokemonSimulation.Models
 
         public string Name { get; set; }
 
-        public decimal Base_Power { get; set; }
+        public int Base_Power { get; set; }
 
         public MoveCategoryEnum Move_Category { get; set; }
 

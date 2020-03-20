@@ -10,7 +10,6 @@
       "BaseSecurity/1.0.0": {
         "dependencies": {
           "Dapper": "1.60.6",
-          "Extensions.MV": "1.1.1",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "NETStandard.Library": "2.0.3",
           "PokemonSimulation.Models": "1.0.0",
@@ -34,11 +33,11 @@
           }
         }
       },
-      "Extensions.MV/1.1.1": {
+      "Extensions.MV/2.0.2": {
         "runtime": {
           "lib/netstandard2.0/Extensions.MV.dll": {
-            "assemblyVersion": "1.1.1.0",
-            "fileVersion": "1.1.1.0"
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
           }
         }
       },
@@ -800,7 +799,7 @@
       },
       "PokemonSimulation.Models/1.0.0": {
         "dependencies": {
-          "Extensions.MV": "1.1.1"
+          "Extensions.MV": "2.0.2"
         },
         "runtime": {
           "PokemonSimulation.Models.dll": {}
@@ -821,12 +820,12 @@
       "path": "dapper/1.60.6",
       "hashPath": "dapper.1.60.6.nupkg.sha512"
     },
-    "Extensions.MV/1.1.1": {
+    "Extensions.MV/2.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Sdk+JmY8N+1AbgXtTIAwh4irko4aV2TXhikDl1EJpKX/HHK9hmcD2lcPAPd4jUPvHa4GsieTtEcd97Y5yJMk6A==",
-      "path": "extensions.mv/1.1.1",
-      "hashPath": "extensions.mv.1.1.1.nupkg.sha512"
+      "sha512": "sha512-fvOWmCcOJkqHffSQpdip2cZ8ReQ3Y2P0pKcXxMTyf7JhUTKGLWe1iqWTn5cpQsjlsjyyFoxparmI7068bC2IAg==",
+      "path": "extensions.mv/2.0.2",
+      "hashPath": "extensions.mv.2.0.2.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",

@@ -39,6 +39,8 @@ namespace PokemonSimulator.API
                 configuration.RootPath = "wwwroot";
             });
 
+            services.AddSingleton<CacheDomain>();
+
             var signingConfiguration = new SigningConfiguration();
             services.AddSingleton(signingConfiguration);
 
@@ -93,6 +95,7 @@ namespace PokemonSimulator.API
             services.AddScoped<INatureApplication, NatureApplication>();
             services.AddScoped<IMoveApplication, MoveApplication>();
             services.AddScoped<IPokemonApplication, PokemonApplication>();
+            services.AddScoped<ISimulationApplication, SimulationApplication>();
             #endregion
 
             services.AddMvc(options => {

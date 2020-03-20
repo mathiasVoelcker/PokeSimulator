@@ -26,7 +26,7 @@
         "dependencies": {
           "BaseSecurity": "1.0.0",
           "Dapper": "2.0.30",
-          "Extensions.MV": "1.1.1",
+          "Extensions.MV": "2.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.AspNetCore.SpaServices.Extensions": "3.1.2",
@@ -113,8 +113,6 @@
           "Microsoft.AspNetCore.WebSockets": "3.1.0.0",
           "Microsoft.AspNetCore.WebUtilities": "3.1.0.0",
           "Microsoft.CSharp.Reference": "4.0.0.0",
-          "Microsoft.Extensions.Caching.Abstractions": "3.1.0.0",
-          "Microsoft.Extensions.Caching.Memory": "3.1.0.0",
           "Microsoft.Extensions.Configuration.CommandLine": "3.1.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.1.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "3.1.0.0",
@@ -339,11 +337,11 @@
           "lib/netstandard2.0/Dapper.SimpleCRUD.dll": {}
         }
       },
-      "Extensions.MV/1.1.1": {
+      "Extensions.MV/2.0.2": {
         "runtime": {
           "lib/netstandard2.0/Extensions.MV.dll": {
-            "assemblyVersion": "1.1.1.0",
-            "fileVersion": "1.1.1.0"
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
           }
         },
         "compile": {
@@ -460,6 +458,37 @@
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/3.1.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.6706"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/3.1.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Options": "3.1.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.6706"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/3.1.2": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.2"
@@ -1449,7 +1478,6 @@
       "BaseSecurity/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.30",
-          "Extensions.MV": "1.1.1",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "PokemonSimulation.Models": "1.0.0",
           "System.Data.SqlClient": "4.8.0",
@@ -1465,6 +1493,8 @@
       "PokemonSimulation.Domain/1.0.0": {
         "dependencies": {
           "BaseSecurity": "1.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Caching.Memory": "3.1.2",
           "PokemonSimulation.Infra": "1.0.0",
           "PokemonSimulation.Models": "1.0.0"
         },
@@ -1479,6 +1509,8 @@
         "dependencies": {
           "Dapper": "2.0.30",
           "Dapper.SimpleCRUD": "2.2.0.1",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.2",
+          "Microsoft.Extensions.Caching.Memory": "3.1.2",
           "Microsoft.Extensions.Configuration": "3.1.2",
           "PokemonSimulation.Models": "1.0.0",
           "Serilog.AspNetCore": "3.2.0",
@@ -1495,7 +1527,7 @@
       },
       "PokemonSimulation.Models/1.0.0": {
         "dependencies": {
-          "Extensions.MV": "1.1.1"
+          "Extensions.MV": "2.0.2"
         },
         "runtime": {
           "PokemonSimulation.Models.dll": {}
@@ -1969,18 +2001,6 @@
       "Microsoft.CSharp.Reference/4.0.0.0": {
         "compile": {
           "Microsoft.CSharp.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.Extensions.Caching.Abstractions/3.1.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Caching.Abstractions.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.Extensions.Caching.Memory/3.1.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Caching.Memory.dll": {}
         },
         "compileOnly": true
       },
@@ -3128,12 +3148,12 @@
       "path": "dapper.simplecrud/2.2.0.1",
       "hashPath": "dapper.simplecrud.2.2.0.1.nupkg.sha512"
     },
-    "Extensions.MV/1.1.1": {
+    "Extensions.MV/2.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Sdk+JmY8N+1AbgXtTIAwh4irko4aV2TXhikDl1EJpKX/HHK9hmcD2lcPAPd4jUPvHa4GsieTtEcd97Y5yJMk6A==",
-      "path": "extensions.mv/1.1.1",
-      "hashPath": "extensions.mv.1.1.1.nupkg.sha512"
+      "sha512": "sha512-fvOWmCcOJkqHffSQpdip2cZ8ReQ3Y2P0pKcXxMTyf7JhUTKGLWe1iqWTn5cpQsjlsjyyFoxparmI7068bC2IAg==",
+      "path": "extensions.mv/2.0.2",
+      "hashPath": "extensions.mv.2.0.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.1": {
       "type": "package",
@@ -3218,6 +3238,20 @@
       "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "path": "microsoft.extensions.apidescription.server/3.0.0",
       "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UfMC7L+8ha05PUAfVpmMS0kb7C1BoOrWxN70706D50qWohXLYgkUsu22oS7zkd9amCPTCmhRm2z/LisN8SESgg==",
+      "path": "microsoft.extensions.caching.abstractions/3.1.2",
+      "hashPath": "microsoft.extensions.caching.abstractions.3.1.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Memory/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4O/YgpVhK/ZIYteGy9LyJv+YRcTxLOe7AnMUHBj1m1U40Er1/dbMymFTH1HrRS/fkVB90un24JhG+c1qSWjjjA==",
+      "path": "microsoft.extensions.caching.memory/3.1.2",
+      "hashPath": "microsoft.extensions.caching.memory.3.1.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.1.2": {
       "type": "package",
@@ -4248,16 +4282,6 @@
       "sha512": ""
     },
     "Microsoft.CSharp.Reference/4.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.Caching.Abstractions/3.1.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.Caching.Memory/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

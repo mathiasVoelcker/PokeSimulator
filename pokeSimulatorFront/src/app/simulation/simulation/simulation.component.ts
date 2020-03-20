@@ -35,20 +35,20 @@ export class SimulationComponent implements OnInit {
       });
       this.simulationForm = fb.group({
         attacking_pokemon_id: [null, Validators.required],
-      defending_pokemon_id: [null, Validators.required],
-      moveid: [null, Validators.required],
-      modifier: [1]
-    })
+        defending_pokemon_id: [null, Validators.required],
+        moveid: [null, Validators.required],
+        modifier: [1]
+      })
   }
 
   ngOnInit(): void {
-    if (!this.isLogged()) {
-      this.toastr.warning(
-        'You have to log in to simulate a battle',
-        'Warning',
-        { disableTimeOut : true}
-      );
-    }
+    // if (!this.isLogged()) {
+    //   this.toastr.warning(
+    //     'You have to log in to simulate a battle',
+    //     'Warning',
+    //     { disableTimeOut : true}
+    //   );
+    // }
   }
 
   isLogged() {
@@ -64,6 +64,7 @@ export class SimulationComponent implements OnInit {
   }
 
   simulateBattle() {
+    debugger;
     let simulationDto = this.simulationForm.getRawValue();
     this.simulationService.getDamage(simulationDto).subscribe( resp => {
       const damage = resp
