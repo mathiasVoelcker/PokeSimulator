@@ -23,6 +23,8 @@ namespace PokemonSimulator.API.Controllers
         public IActionResult GetDamage(SimulationDto simulationDto)
         {
             return ExecFunc(() => {
+                string token = Request.Headers["Authorization"];
+                if (token == null) return _simulationApplication.GetMoveDamageInCache(simulationDto);
                 return _simulationApplication.GetMoveDamage(simulationDto);
             });
         }

@@ -86,7 +86,6 @@ export class PokemonRegisterComponent implements OnInit {
   }
 
   private initializeObjects() {
-    debugger;
     if (!!this.pokemonIdParam) {
       this.pokemonService.getPokemon(this.pokemonIdParam).subscribe(resp => {
         this.pokemon = resp;
@@ -224,7 +223,6 @@ export class PokemonRegisterComponent implements OnInit {
   }
 
   private calculateNature(stat: Stat): number {
-    debugger;
     const natureSelected = this.pokemonForm.get('nature').value
     if (!natureSelected) {
       return 1;

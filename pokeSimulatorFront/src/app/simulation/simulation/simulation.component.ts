@@ -64,7 +64,6 @@ export class SimulationComponent implements OnInit {
   }
 
   simulateBattle() {
-    debugger;
     let simulationDto = this.simulationForm.getRawValue();
     this.simulationService.getDamage(simulationDto).subscribe( resp => {
       const damage = resp

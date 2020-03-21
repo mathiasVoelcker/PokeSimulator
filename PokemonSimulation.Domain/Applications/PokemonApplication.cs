@@ -83,12 +83,14 @@ namespace PokemonSimulation.Domain.Applications
 
         public bool SaveInCache(PokemonDto pokemon)
         {
+            AjustMovesNames(pokemon);
             List<PokemonDto> listPokemonDto;
             _cacheDomain.Cache.TryGetValue("Pokemons", out listPokemonDto);
             if (listPokemonDto == null)
                 listPokemonDto = new List<PokemonDto>();    
+            pokemon.Id = listPokemonDto.Count + 1;
             listPokemonDto.Add(pokemon);
-            _cacheDomain.Set("Pokemons", new List<PokemonDto> { pokemon });
+            _cacheDomain.Set("Pokemons", listPokemonDto);
             return true;
         }
 
@@ -106,6 +108,18 @@ namespace PokemonSimulation.Domain.Applications
             if (pokemon.Id_User != idUserLogged) throw new DomainException("This pokemon belongs to someone else!");
             _pokemonRepository.Delete(pokemon);
             return true;
+        }
+
+        private void AjustMovesNames(PokemonDto pokemonDto)
+        {
+            if (pokemonDto.Move1 != null)
+                pokemonDto.Move1.Name = pokemonDto.Move1.Name.Split('-')[0];
+            if (pokemonDto.Move2 != null)                
+                pokemonDto.Move2.Name = pokemonDto.Move2?.Name.Split('-')[0];
+            if (pokemonDto.Move3 != null)
+                pokemonDto.Move3.Name = pokemonDto.Move3?.Name.Split('-')[0];
+            if (pokemonDto.Move4 != null)
+                pokemonDto.Move4.Name = pokemonDto.Move4?.Name.Split('-')[0];
         }
     }
 }

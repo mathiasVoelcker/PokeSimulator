@@ -19,7 +19,7 @@ export class SimulationService extends MainService {
       .set('defendingPokemonId', simulationDto.defending_pokemon_id.toString())
       .set('moveId', simulationDto.moveid.toString())
       .set('modifier', simulationDto.modifier.toString());
-    return this.http.get<number>(`${this.url}/getDamage`, { params });
+    return this.http.get<number>(`${this.url}/getDamage`, { headers: this.headers, params: params});
   }
 
 }

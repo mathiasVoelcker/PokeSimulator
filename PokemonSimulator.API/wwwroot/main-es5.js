@@ -4789,9 +4789,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SimulationCardComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          if (this.isLogged()) {
-            this.listPokemons();
-          }
+          this.listPokemons();
         }
       }, {
         key: "listPokemons",
@@ -4816,43 +4814,92 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function setPokemon(id) {
           var _this16 = this;
 
-          this.pokemonService.getPokemon(id).subscribe(function (resp) {
-            _this16.simulationPokemon = new _simulation_pokemon__WEBPACK_IMPORTED_MODULE_2__["SimulationPokemon"](resp);
+          this.clearForm();
 
-            if (_this16.isAttacking) {
-              _this16.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
+          if (this.authService.isLogged()) {
+            this.pokemonService.getPokemon(id).subscribe(function (resp) {
+              _this16.simulationPokemon = new _simulation_pokemon__WEBPACK_IMPORTED_MODULE_2__["SimulationPokemon"](resp);
 
-              _this16.movesDropdown = [];
+              if (_this16.isAttacking) {
+                _this16.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
 
-              if (!!resp.move1) {
-                var move1_text = "".concat(resp.move1.name, " - Power: ").concat(resp.move1.basePower, " - ").concat(resp.move1.category);
+                _this16.movesDropdown = [];
 
-                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](1, move1_text));
+                if (!!resp.move1) {
+                  var move1_text = "".concat(resp.move1.name, " - Power: ").concat(resp.move1.basePower, " - ").concat(resp.move1.category);
+
+                  _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](1, move1_text));
+                }
+
+                if (!!resp.move2) {
+                  var move2_text = "".concat(resp.move2.name, " - Power: ").concat(resp.move2.basePower, " - ").concat(resp.move2.category);
+
+                  _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](2, move2_text));
+                }
+
+                if (!!resp.move3) {
+                  var move3_text = "".concat(resp.move3.name, " - Power: ").concat(resp.move3.basePower, " - ").concat(resp.move3.category);
+
+                  _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](3, move3_text));
+                }
+
+                if (!!resp.move4) {
+                  var move4_text = "".concat(resp.move4.name, " - Power: ").concat(resp.move4.basePower, " - ").concat(resp.move4.category);
+
+                  _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](4, move4_text));
+                }
+              } else {
+                _this16.simulationForm.get('defending_pokemon_id').setValue(resp.id);
               }
 
-              if (!!resp.move2) {
-                var move2_text = "".concat(resp.move2.name, " - Power: ").concat(resp.move2.basePower, " - ").concat(resp.move2.category);
+              _this16.changed.emit(_this16.simulationPokemon);
+            });
+          } else {
+            this.setPokemonCache(+id);
+          }
+        }
+      }, {
+        key: "clearForm",
+        value: function clearForm() {
+          this.movesDropdown = [];
+          this.simulationForm.get('moveid').setValue(0);
+          this.changed.emit(null);
+        }
+      }, {
+        key: "setPokemonCache",
+        value: function setPokemonCache(id) {
+          var selectedPokemon = this.pokemons.find(function (x) {
+            return x.id == id;
+          });
+          this.simulationPokemon = new _simulation_pokemon__WEBPACK_IMPORTED_MODULE_2__["SimulationPokemon"](selectedPokemon);
 
-                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](2, move2_text));
-              }
+          if (this.isAttacking) {
+            this.simulationForm.get('attacking_pokemon_id').setValue(selectedPokemon.id);
 
-              if (!!resp.move3) {
-                var move3_text = "".concat(resp.move3.name, " - Power: ").concat(resp.move3.basePower, " - ").concat(resp.move3.category);
-
-                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](3, move3_text));
-              }
-
-              if (!!resp.move4) {
-                var move4_text = "".concat(resp.move4.name, " - Power: ").concat(resp.move4.basePower, " - ").concat(resp.move4.category);
-
-                _this16.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](4, move4_text));
-              }
-            } else {
-              _this16.simulationForm.get('defending_pokemon_id').setValue(resp.id);
+            if (!!selectedPokemon.move1) {
+              var move1_text = "".concat(selectedPokemon.move1.name, " - Power: ").concat(selectedPokemon.move1.basePower, " - ").concat(selectedPokemon.move1.category);
+              this.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](1, move1_text));
             }
 
-            _this16.changed.emit(_this16.simulationPokemon);
-          });
+            if (!!selectedPokemon.move2) {
+              var move2_text = "".concat(selectedPokemon.move2.name, " - Power: ").concat(selectedPokemon.move2.basePower, " - ").concat(selectedPokemon.move2.category);
+              this.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](2, move2_text));
+            }
+
+            if (!!selectedPokemon.move3) {
+              var move3_text = "".concat(selectedPokemon.move3.name, " - Power: ").concat(selectedPokemon.move3.basePower, " - ").concat(selectedPokemon.move3.category);
+              this.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](3, move3_text));
+            }
+
+            if (!!selectedPokemon.move4) {
+              var move4_text = "".concat(selectedPokemon.move4.name, " - Power: ").concat(selectedPokemon.move4.basePower, " - ").concat(selectedPokemon.move4.category);
+              this.movesDropdown.push(new _shared_layouts_basic_dropdown_basic_dropdown_entity__WEBPACK_IMPORTED_MODULE_1__["BasicDropdownEntity"](4, move4_text));
+            }
+          } else {
+            this.simulationForm.get('defending_pokemon_id').setValue(selectedPokemon.id);
+          }
+
+          this.changed.emit(this.simulationPokemon);
         }
       }, {
         key: "setMove",
@@ -4890,7 +4937,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
           }
 
-          this.simulationForm.get('moveid').setValue(!!move ? move.id : null);
+          this.simulationForm.get('moveid').setValue(!!move ? move.id : 0);
           this.simulationPokemon.move = move;
           this.changed.emit(this.simulationPokemon);
         }
@@ -5145,6 +5192,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getDamage(simulationDto) {
           var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]().set('attackingPokemonId', simulationDto.attacking_pokemon_id.toString()).set('defendingPokemonId', simulationDto.defending_pokemon_id.toString()).set('moveId', simulationDto.moveid.toString()).set('modifier', simulationDto.modifier.toString());
           return this.http.get("".concat(this.url, "/getDamage"), {
+            headers: this.headers,
             params: params
           });
         }
@@ -5347,7 +5395,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function simulateBattle() {
           var _this19 = this;
 
-          debugger;
           var simulationDto = this.simulationForm.getRawValue();
           this.simulationService.getDamage(simulationDto).subscribe(function (resp) {
             var damage = resp;

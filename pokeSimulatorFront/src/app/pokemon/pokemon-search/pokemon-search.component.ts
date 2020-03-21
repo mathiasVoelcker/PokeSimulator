@@ -29,7 +29,6 @@ export class PokemonSearchComponent {
     this.pokemonSpeciesServie.listPokemonSpecies(
       this.pokemonSearchForm.get('name').value
     ).subscribe((resp) => {
-      debugger;
       this.pokemonSpecies = resp;
     });
   }

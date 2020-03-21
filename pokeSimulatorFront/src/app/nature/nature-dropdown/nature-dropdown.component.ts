@@ -28,7 +28,6 @@ export class NatureDropdownComponent extends AdvancedDropdownComponent {
   }
 
   setItem(text: string) {
-    debugger;
     if (!!text) {
       this.selected.emit(
         this.natures.find(x => x.name.toUpperCase().includes(text.toUpperCase()))

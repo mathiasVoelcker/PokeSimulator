@@ -44,9 +44,7 @@ export class SimulationCardComponent implements OnInit {
    }
 
   ngOnInit() {
-    if (this.isLogged()) {
-      this.listPokemons();
-    }
+    this.listPokemons();
   }
 
   listPokemons() {
@@ -63,32 +61,72 @@ export class SimulationCardComponent implements OnInit {
   }
 
   setPokemon(id: string) {
-    this.pokemonService.getPokemon(id).subscribe(resp => {
-      this.simulationPokemon = new SimulationPokemon(resp);
-      if (this.isAttacking) {
-        this.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
-        this.movesDropdown = []
-        if(!!resp.move1) {
-          let move1_text = `${resp.move1.name} - Power: ${resp.move1.basePower} - ${resp.move1.category}`
-          this.movesDropdown.push(new BasicDropdownEntity(1, move1_text));
+    this.clearForm();
+    if (this.authService.isLogged())
+    {
+      this.pokemonService.getPokemon(id).subscribe(resp => {
+        this.simulationPokemon = new SimulationPokemon(resp);
+        if (this.isAttacking) {
+          this.simulationForm.get('attacking_pokemon_id').setValue(resp.id);
+          this.movesDropdown = []
+          if(!!resp.move1) {
+            let move1_text = `${resp.move1.name} - Power: ${resp.move1.basePower} - ${resp.move1.category}`
+            this.movesDropdown.push(new BasicDropdownEntity(1, move1_text));
+          }
+          if (!!resp.move2) {
+            let move2_text = `${resp.move2.name} - Power: ${resp.move2.basePower} - ${resp.move2.category}`
+            this.movesDropdown.push(new BasicDropdownEntity(2, move2_text));
+          }
+          if (!!resp.move3) {
+            let move3_text = `${resp.move3.name} - Power: ${resp.move3.basePower} - ${resp.move3.category}`
+            this.movesDropdown.push(new BasicDropdownEntity(3, move3_text));
+          }
+          if (!!resp.move4) {
+            let move4_text = `${resp.move4.name} - Power: ${resp.move4.basePower} - ${resp.move4.category}`
+            this.movesDropdown.push(new BasicDropdownEntity(4, move4_text));
+          }
+        } else {
+          this.simulationForm.get('defending_pokemon_id').setValue(resp.id);
         }
-        if (!!resp.move2) {
-          let move2_text = `${resp.move2.name} - Power: ${resp.move2.basePower} - ${resp.move2.category}`
-          this.movesDropdown.push(new BasicDropdownEntity(2, move2_text));
-        }
-        if (!!resp.move3) {
-          let move3_text = `${resp.move3.name} - Power: ${resp.move3.basePower} - ${resp.move3.category}`
-          this.movesDropdown.push(new BasicDropdownEntity(3, move3_text));
-        }
-        if (!!resp.move4) {
-          let move4_text = `${resp.move4.name} - Power: ${resp.move4.basePower} - ${resp.move4.category}`
-          this.movesDropdown.push(new BasicDropdownEntity(4, move4_text));
-        }
-      } else {
-        this.simulationForm.get('defending_pokemon_id').setValue(resp.id);
+        this.changed.emit(this.simulationPokemon);
+      });
+    }
+    else {
+      this.setPokemonCache(+id);
+    }
+  }
+  clearForm() {
+    this.movesDropdown = []
+    this.simulationForm.get('moveid').setValue(0);
+    this.changed.emit(null);
+    
+  }
+
+  setPokemonCache(id: number) {
+    let selectedPokemon = this.pokemons.find(x => x.id == id);
+    this.simulationPokemon = new SimulationPokemon(selectedPokemon);
+    if (this.isAttacking) {
+      this.simulationForm.get('attacking_pokemon_id').setValue(selectedPokemon.id);
+      if(!!selectedPokemon.move1) {
+        let move1_text = `${selectedPokemon.move1.name} - Power: ${selectedPokemon.move1.basePower} - ${selectedPokemon.move1.category}`
+        this.movesDropdown.push(new BasicDropdownEntity(1, move1_text));
       }
-      this.changed.emit(this.simulationPokemon);
-    });
+      if (!!selectedPokemon.move2) {
+        let move2_text = `${selectedPokemon.move2.name} - Power: ${selectedPokemon.move2.basePower} - ${selectedPokemon.move2.category}`
+        this.movesDropdown.push(new BasicDropdownEntity(2, move2_text));
+      }
+      if (!!selectedPokemon.move3) {
+        let move3_text = `${selectedPokemon.move3.name} - Power: ${selectedPokemon.move3.basePower} - ${selectedPokemon.move3.category}`
+        this.movesDropdown.push(new BasicDropdownEntity(3, move3_text));
+      }
+      if (!!selectedPokemon.move4) {
+        let move4_text = `${selectedPokemon.move4.name} - Power: ${selectedPokemon.move4.basePower} - ${selectedPokemon.move4.category}`
+        this.movesDropdown.push(new BasicDropdownEntity(4, move4_text));
+      }
+    } else {
+      this.simulationForm.get('defending_pokemon_id').setValue(selectedPokemon.id);
+    }
+    this.changed.emit(this.simulationPokemon);
   }
 
   setMove(id: string) {
@@ -114,7 +152,7 @@ export class SimulationCardComponent implements OnInit {
         move = null;
       }
     }
-    this.simulationForm.get('moveid').setValue(!!move ? move.id : null);
+    this.simulationForm.get('moveid').setValue(!!move ? move.id : 0);
     this.simulationPokemon.move = move
     this.changed.emit(this.simulationPokemon);
   }

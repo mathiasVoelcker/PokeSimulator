@@ -8,7 +8,8 @@ namespace PokemonSimulation.Models.Adapters
         {
             return new TypeDto()
             {
-                Name = type.Name.ToLower()
+                Id = type.Id,
+                Name = type.Name?.ToLower()
             };
         }
     }
