@@ -1,4 +1,4 @@
 export const environment = {
-  baseUrl: "https://pokesimapp.azurewebsites.net/api/",
+  baseUrl: "https://pokesimulatorapp.azurewebsites.net/api/",
   production: true
 };

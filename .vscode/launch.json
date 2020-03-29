@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/PokemonSimulation.Seeds/bin/Debug/netcoreapp3.1/PokemonSimulation.Seeds.dll",
-            "args": [],
+            "args": ["1","1","1"],
             "cwd": "${workspaceFolder}/PokemonSimulation.Seeds",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
@@ -32,6 +32,26 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "API Prod",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/PokemonSimulator.API/bin/Debug/netcoreapp3.1/PokemonSimulator.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/PokemonSimulator.API",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Production"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
