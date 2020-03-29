@@ -10,6 +10,7 @@ namespace PokemonSimulator.API.Controllers
 {
     public class PokemonsController : BaseController
     {
+        
         private readonly IPokemonApplication _pokemonApplication;
 
         public PokemonsController(
