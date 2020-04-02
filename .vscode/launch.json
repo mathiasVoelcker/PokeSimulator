@@ -18,6 +18,22 @@
             "stopAtEntry": false
         },
         {
+            "name": "Seeds Prod",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/PokemonSimulation.Seeds/bin/Debug/netcoreapp3.1/PokemonSimulation.Seeds.dll",
+            "args": ["1","1","1"],
+            "cwd": "${workspaceFolder}/PokemonSimulation.Seeds",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Production"
+            },
+        },
+        {
             "name": "API",
             "type": "coreclr",
             "request": "launch",
