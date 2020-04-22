@@ -1,0 +1,8 @@
+{
+  "appId": "pokemon.calculator",
+  "appName": "pokeSimulatorMobile",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

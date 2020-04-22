@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">pokeSimulatorMobile</string>
+    <string name="title_activity_main">pokeSimulatorMobile</string>
+    <string name="package_name">pokemon.calculator</string>
+    <string name="custom_url_scheme">pokemon.calculator</string>
+</resources>

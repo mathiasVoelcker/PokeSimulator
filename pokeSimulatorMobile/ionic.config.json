@@ -1,0 +1,7 @@
+{
+  "name": "pokeSimulatorMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
