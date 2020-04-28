@@ -23,7 +23,7 @@
             <li><a href="/search">New Pokemon</a></li>
             <li><a href="/simulation">Simulate Battle</a></li>
             <li *ngIf="!isLogged()"><a href="/login">Log in</a></li>
-            <li *ngIf="isLogged()"><a routerLink="/login" (click)="logout()">Log out</a></li>
+            <li *ngIf="isLogged()"><a (click)="logout()">Log out</a></li>
             <!-- <li>
               <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">UI ELEMENTS <i class="fa fa-angle-down"></i></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">

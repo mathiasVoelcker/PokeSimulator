@@ -44,7 +44,7 @@ export class SignUpComponent {
   login(user: User) {
     this.authService.login(user).subscribe(
       res => {
-        this.authService.setToken(res.jwt);
+        this.authService.setToken(res.accessToken);
         this.router.navigateByUrl('/');
       })
   }

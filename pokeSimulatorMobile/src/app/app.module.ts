@@ -25,7 +25,7 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { AdvancedDropdownComponent } from './shared/layouts/advanced-dropdown/advanced-dropdown.component';
 import { NatureDropdownComponent } from './nature/nature-dropdown/nature-dropdown.component';
 import { MoveDropdownComponent } from './moves/move-dropdown/move-dropdown.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './shared/services/auth.service';
 import { SimulationService } from './simulation/simulation.service';
@@ -36,6 +36,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
+import { TokenInterceptor } from './shared/token-interceptor';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,11 @@ import { ToastrModule } from 'ngx-toastr';
     AuthService,
     SplashScreen,
     StatusBar,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

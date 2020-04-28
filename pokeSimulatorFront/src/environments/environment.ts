@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  baseUrl: "https://pokesimulatorapp.azurewebsites.net/api/",
+  baseUrl: "https://localhost:5001/api/",
   production: false
 };
 

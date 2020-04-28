@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonSearchComponent } from './pokemon/pokemon-search/pokemon-search.component';
 import { PokemonSpeciesService } from './pokemon/pokemon-species.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PokemonRegisterComponent } from './pokemon/pokemon-register/pokemon-register.component';
 import { BasicDropdownComponent } from './shared/layouts/basic-dropdown/basic-dropdown.component';
 import { NatureService } from './nature/nature.service';
@@ -29,6 +29,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MoveDropdownComponent } from './moves/move-dropdown/move-dropdown.component';
+import { TokenInterceptor } from './shared/token-interceptor';
 
 
 
@@ -70,7 +71,12 @@ import { MoveDropdownComponent } from './moves/move-dropdown/move-dropdown.compo
     PokemonService,
     NatureService,
     SimulationService,
-    AuthService
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent]
 })

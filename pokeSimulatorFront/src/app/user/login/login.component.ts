@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
       )
     this.authService.login(user).subscribe(
       res => {
+        debugger;
         this.authService.setToken(res.accessToken);
         this.router.navigateByUrl('/');
       }, err => {

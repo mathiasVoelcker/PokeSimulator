@@ -25,9 +25,11 @@ namespace PokemonSimulation.Domain.Helpers
 
         public int CalculateDamage()
         {
-            var damageNumerator = ((((2*AttackerLevel) / 5) + 2) * MoveBasePower * (AttackingStat / DefendingStat)) + 2;
+            var levelFactor = ((2*AttackerLevel) / 5) + 2;
+            decimal statsFactor = (decimal)AttackingStat / (decimal)DefendingStat;
+            var damageNumerator = (levelFactor * MoveBasePower * statsFactor);
             var damageDenominator = 50;
-            var damage = ((damageNumerator / damageDenominator) * Modifier);
+            var damage = ((((decimal)damageNumerator / (decimal)damageDenominator) + 2) * Modifier);
             return Decimal.ToInt32(damage);
         }
 

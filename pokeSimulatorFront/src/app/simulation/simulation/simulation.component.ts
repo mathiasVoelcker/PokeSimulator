@@ -11,7 +11,7 @@ import { AuthService } from '../../shared/services/auth.service';
   templateUrl: './simulation.component.html',
   styleUrls: ['./simulation.component.css']
 })
-export class SimulationComponent implements OnInit {
+export class SimulationComponent {
 
   attackingPokemon: SimulationPokemon;
   paramId: number;
@@ -39,16 +39,6 @@ export class SimulationComponent implements OnInit {
         moveid: [null, Validators.required],
         modifier: [1]
       })
-  }
-
-  ngOnInit(): void {
-    // if (!this.isLogged()) {
-    //   this.toastr.warning(
-    //     'You have to log in to simulate a battle',
-    //     'Warning',
-    //     { disableTimeOut : true}
-    //   );
-    // }
   }
 
   isLogged() {

@@ -29,4 +29,8 @@ export class AuthService extends MainService {
   isLogged() {
     return localStorage.getItem(this.TOKEN) != null;
   }
+
+  clear(): void {
+    localStorage.removeItem(this.TOKEN);
+  }
 }

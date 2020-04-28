@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,9 @@ export class HeaderComponent {
 
   showToggleItems: boolean;
 
-  constructor(private authService: AuthService) {
+  constructor(
+    private authService: AuthService,
+    private router: Router) {
     this.showToggleItems = false;
   }
 
@@ -30,7 +33,8 @@ export class HeaderComponent {
   }
 
   logout() {
-    localStorage.clear()
+    this.authService.clear();
+    this.router.navigateByUrl("/login");
   }
 
 }

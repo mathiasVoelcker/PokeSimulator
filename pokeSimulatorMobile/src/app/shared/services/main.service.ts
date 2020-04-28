@@ -11,18 +11,18 @@ export abstract class MainService {
   constructor(object: string) {
       this.url = environment.baseUrl + object;
       var token = localStorage.getItem(this.TOKEN)
-      if (!!token)
-      {
-        this.headers = new HttpHeaders({
-          'Content-Type': 'application/json',
-          'Authorization': localStorage.getItem(this.TOKEN)
-        })
-      }
-      else 
-      {
-        this.headers = new HttpHeaders({
-          'Content-Type': 'application/json',
-        })
-      }
+      // if (!!token)
+      // {
+      //   this.headers = new HttpHeaders({
+      //     'Content-Type': 'application/json',
+      //     'Authorization': localStorage.getItem(this.TOKEN)
+      //   })
+      // }
+      // else 
+      // {
+      //   this.headers = new HttpHeaders({
+      //     'Content-Type': 'application/json',
+      //   })
+      // }
   }
 }

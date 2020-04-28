@@ -30,6 +30,7 @@ export class HeaderComponent {
   }
 
   logout() {
+    this.authService.clear();
     localStorage.clear()
   }
 

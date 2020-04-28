@@ -13,23 +13,23 @@ export class PokemonService extends MainService {
   }
 
   listPokemons(): Observable<Pokemon[]> {
-    return this.http.get<Pokemon[]>(`${this.url}getAll`, { headers: this.headers });
+    return this.http.get<Pokemon[]>(`${this.url}getAll`);
   }
 
   getPokemon(id: string): Observable<Pokemon> {
-    return this.http.get<Pokemon>(`${this.url}getByid/${id}`, { headers: this.headers });
+    return this.http.get<Pokemon>(`${this.url}getByid/${id}`);
   }
 
   savePokemon(pokemon: Pokemon): Observable<Pokemon> {
-    return this.http.post<Pokemon>(`${this.url}create`, pokemon, { headers: this.headers });
+    return this.http.post<Pokemon>(`${this.url}create`, pokemon);
   }
 
   updatePokemon(pokemon: Pokemon, id: string): Observable<Pokemon> {
-    return this.http.put<Pokemon>(`${this.url}update/${id}`, pokemon, { headers: this.headers })
+    return this.http.put<Pokemon>(`${this.url}update/${id}`, pokemon)
   }
 
   deletePokemon(id: number): Observable<Pokemon> {
-    return this.http.delete<Pokemon>(`${this.url}delete/${id}`, { headers: this.headers });
+    return this.http.delete<Pokemon>(`${this.url}delete/${id}`);
   }
 
 }
