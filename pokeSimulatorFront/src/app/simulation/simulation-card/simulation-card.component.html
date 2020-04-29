@@ -30,7 +30,7 @@
             <p>Special Defense: {{ simulationPokemon.pokemon.spDefense }}</p>
             <p>Speed: {{ simulationPokemon.pokemon.speed }}</p>
             <div *ngIf="isAttacking">
-              <app-basic-dropdown [items]="movesDropdown" [itemTitle]="moveDROPDOWN_TITLE" (itemSelected)="setMove($event)"></app-basic-dropdown>
+              <app-basic-dropdown [items]="movesDropdown" [itemTitle]="moveDROPDOWN_TITLE" (itemSelected)="setMove($event)" [clear]="clearMoveDrop"></app-basic-dropdown>
               <p class="error-message" *ngIf="!validateMove()">A move must be selected</p>
               <label>Modifier</label><br>
               <input formControlName="modifier" type="number" class="form-control"/>

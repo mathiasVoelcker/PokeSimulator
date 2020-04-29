@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { PokemonService } from '../../pokemon/pokemon.service';
 import { Pokemon } from '../../pokemon/entities/pokemon';
 import { BasicDropdownEntity } from '../../shared/layouts/basic-dropdown/basic-dropdown-entity';
@@ -7,11 +7,13 @@ import { SimulationPokemon } from '../simulation-pokemon';
 import { FormGroup } from '../../../../node_modules/@angular/forms';
 import { AuthService } from '../../shared/services/auth.service';
 import { PokemonDomain } from '../../pokemon/pokemon-domain';
+import { BasicDropdownComponent } from 'src/app/shared/layouts/basic-dropdown/basic-dropdown.component';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-simulation-card',
   templateUrl: './simulation-card.component.html',
-  styleUrls: ['./simulation-card.component.css']
+  styleUrls: ['./simulation-card.component.css'],
 })
 export class SimulationCardComponent implements OnInit {
 
@@ -31,12 +33,14 @@ export class SimulationCardComponent implements OnInit {
 
   @Input()
   isAttacking: boolean = false;
+  
+  @Input()
+  selectedPokemon: number;
 
   @Output()
   changed = new EventEmitter<SimulationPokemon>();
 
-  @Input()
-  selectedPokemon: number;
+  clearMoveDrop: Subject<boolean> = new Subject();
 
   constructor(
     private authService: AuthService,
@@ -95,9 +99,14 @@ export class SimulationCardComponent implements OnInit {
       this.setPokemonCache(+id);
     }
   }
+
   clearForm() {
     this.movesDropdown = []
-    this.simulationForm.get('moveid').setValue(0);
+    this.clearMoveDrop.next(true);
+    // if (this.isAttacking)
+    // {
+    //   this.simulationForm.get('moveid').setValue(0);
+    // }
     this.changed.emit(null);
     
   }
