@@ -31,7 +31,7 @@ namespace PokemonSimulation.Domain.Applications
             _cacheDomain = cacheDomain;
         }
 
-        public int GetMoveDamage(SimulationDto simulationDto)
+        public SimulationReturnDto GetMoveDamage(SimulationDto simulationDto)
         {
             //GET DATA
             var attackingPokemon = _pokemonRepository.GetById<Pokemons>(simulationDto.AttackingPokemonId);
@@ -58,7 +58,9 @@ namespace PokemonSimulation.Domain.Applications
             var typeEffect = secondTypeAdvantage == null ? firstTypeAdvantage.Effect : firstTypeAdvantage.Effect * secondTypeAdvantage.Effect;
             simulationCalc.AddTypesDataToModifier(hasStab, typeEffect);
 
-            return simulationCalc.CalculateDamage();
+            var damage = simulationCalc.CalculateDamage();
+
+            return new SimulationReturnDto() { Damage = damage, EffectDecimal = typeEffect };
         }
 
         public int GetMoveDamageInCache(SimulationDto simulationDto)

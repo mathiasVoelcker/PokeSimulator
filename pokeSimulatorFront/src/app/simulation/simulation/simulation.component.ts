@@ -56,14 +56,15 @@ export class SimulationComponent {
   simulateBattle() {
     let simulationDto = this.simulationForm.getRawValue();
     this.simulationService.getDamage(simulationDto).subscribe( resp => {
-      const damage = resp
+      const damage = resp.damage;
       const attacker_name = this.attackingPokemon.pokemon.pokemonSpecies.name
       const defender_name = this.defendingPokemon.pokemon.pokemonSpecies.name
       const movename = this.attackingPokemon.move.name
       const defenderHp = this.defendingPokemon.pokemon.hp
       this.battleResultsTitle = `Pokemon ${attacker_name.toUpperCase()} attacked ${defender_name.toUpperCase()} with ${movename}.`
       this.battleResults = `${movename} took ${damage} of damage.\n
-      ${defender_name.toUpperCase()} HP dropped from ${defenderHp} to ${defenderHp - damage}.\n ${((damage/defenderHp) * 100).toFixed(0)}% of its total HP`
+      ${defender_name.toUpperCase()} HP dropped from ${defenderHp} to ${defenderHp - damage}.\n ${((damage/defenderHp) * 100).toFixed(0)}% of its total HP.\n
+      ${resp.effect}`
     });
   }
 

@@ -99,7 +99,12 @@
                 <input formControlName="ivHp" class="form-control" type="number">
               </div>
             </div>
-            <p class="error-message" *ngIf="!validateIVs()">All IV must be informed and lower than 31</p>
+            <div class="col-md-6 u-margin-top-medium">
+              <div class="field">
+                <button class="btn btn-success" (click)="SetIvsToMax()" type="button">Set to Max</button>
+                <p class="error-message" *ngIf="!validateIVs()">All IV must be informed and lower than 31</p>
+              </div>
+            </div>
           </div>
           <div class="col-md-4">
             <div class="col-md-12">
@@ -133,9 +138,13 @@
                 <input formControlName="evHp" class="form-control" type="number">
               </div>
             </div>
-            <p>EV points left: {{totalEvLeft}}</p>
-            <p class="error-message" *ngIf="!validateEVs()">All EV must be informed and lower than 252</p>
-            <p class="error-message" *ngIf="!validateEVsTotal()">The some of all EV must be lower than 510</p>
+            <div class="col-md-6 u-margin-top-medium">
+              <div class="field">
+                <p>EV points left: {{totalEvLeft}}</p>
+                <p class="error-message" *ngIf="!validateEVs()">All EV must be informed and lower than 252</p>
+                <p class="error-message" *ngIf="!validateEVsTotal()">The some of all EV must be lower than 510</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row">

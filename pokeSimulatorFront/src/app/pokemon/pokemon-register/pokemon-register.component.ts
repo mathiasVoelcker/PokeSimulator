@@ -174,6 +174,15 @@ export class PokemonRegisterComponent implements OnInit {
     return ev_total <= 510;
   }
 
+  SetIvsToMax() {
+    this.pokemonForm.get('ivHp').setValue(31);
+    this.pokemonForm.get('ivAttack').setValue(31);
+    this.pokemonForm.get('ivDefense').setValue(31);
+    this.pokemonForm.get('ivSpAttack').setValue(31);
+    this.pokemonForm.get('ivSpDefense').setValue(31);
+    this.pokemonForm.get('ivSpeed').setValue(31);
+  }
+
   private refreshStats(){
     this.pokemon.hp = Math.round(this.calculateHP());
     this.pokemon.attack = Math.round(this.calculateStat('Attack', Stat.Attack, this.pokemon_species.baseAttack));
