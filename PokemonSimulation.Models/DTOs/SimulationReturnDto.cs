@@ -15,6 +15,8 @@ namespace PokemonSimulation.Models.DTOs
                     Effect = "Is super effective!";
                 else if (value == 0m)
                     Effect = "The move had no effect";
+                else
+                    Effect = "";
             }
          }
 

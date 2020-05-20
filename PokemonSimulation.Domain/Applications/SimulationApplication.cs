@@ -63,7 +63,7 @@ namespace PokemonSimulation.Domain.Applications
             return new SimulationReturnDto() { Damage = damage, EffectDecimal = typeEffect };
         }
 
-        public int GetMoveDamageInCache(SimulationDto simulationDto)
+        public SimulationReturnDto GetMoveDamageInCache(SimulationDto simulationDto)
         {
             //GET DATA
             List<PokemonDto> listPokemonDto;
@@ -93,7 +93,9 @@ namespace PokemonSimulation.Domain.Applications
             
             simulationCalc.AddTypesDataToModifier(hasStab, typeEffect);
 
-            return simulationCalc.CalculateDamage();
+            var damage = simulationCalc.CalculateDamage();
+
+            return new SimulationReturnDto() { Damage = damage, EffectDecimal = typeEffect };
         }
     }
 }

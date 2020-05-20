@@ -6,6 +6,6 @@ namespace PokemonSimulation.Domain.Interfaces
     {
         SimulationReturnDto GetMoveDamage(SimulationDto simulationDto);
 
-        int GetMoveDamageInCache(SimulationDto simulationDto);
+        SimulationReturnDto GetMoveDamageInCache(SimulationDto simulationDto);
     }
 }

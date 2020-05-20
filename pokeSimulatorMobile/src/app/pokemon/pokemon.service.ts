@@ -13,7 +13,6 @@ export class PokemonService extends MainService {
   }
 
   listPokemons(): Observable<Pokemon[]> {
-    debugger;
     return this.http.get<Pokemon[]>(`${this.url}getAll`);
   }
 
